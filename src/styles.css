@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+
+  }
+
+  table .badge {
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#62686e;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  table .items {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+
+  table td{
+      width: 150px;
+  }
+
+
+  table tr:hover {
+    color: #1a2327;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+  table tr.selected {
+    background-color: rgb(66, 63, 63);
+    color: white;
+  }
+  table tr.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  table tr.selected:active {
+    background-color: black;
+    color: white;
+  }

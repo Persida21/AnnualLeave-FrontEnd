@@ -1,0 +1,44 @@
+<form #editApp="ngForm" class="form-group" (ngSubmit)="onClickSubmit(editApp.value)">
+
+    <div class="col-25">
+        <label for="title">Title</label>
+    </div>
+    <input type="text" class="form-control" id="title" required [(ngModel)]="model.title" name="title">
+
+
+    <div class="col-25">
+        <label for="description">Description</label>
+    </div>
+    <input type="text" class="form-control" id="description" required [(ngModel)]="model.description"
+        name="description">
+
+
+    <div class="col-25">
+        <label for="type">Type</label>
+    </div>
+
+    <select name="type" id="type" [(ngModel)]="model.type">
+        <option value="DAYOFF">DAY OFF</option>
+        <option value="VACATION">VACATION</option>
+        <option value="COMPENSATIONDAY">COMPENSATION DAY</option>
+
+    </select>
+
+
+    <div class="col-25">
+        <label for="startDate">StartDate</label>
+    </div>
+    <input type="date" class="form-control" [(ngModel)]="model.startDt" id="startDate" required name="startDate">
+
+
+    <div class="col-25">
+        <label for="endDate">EndDate</label>
+    </div>
+    <input type="date" class="form-control" id="endDate" required [(ngModel)]="model.endDate" name="endDate">
+    <br>
+    <input type="submit" value="SAVE">
+    <br>
+    <input type="button" (click)="delete()" value="Delete Application">
+
+
+</form>

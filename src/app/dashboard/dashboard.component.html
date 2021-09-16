@@ -1,0 +1,20 @@
+<h1>Applications List:</h1> 
+<table class="applications">
+    <thead class ="badge">
+        <tr></tr>
+        <td>ID</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Type</td>
+    </thead>
+    <tbody *ngFor="let application of applications"  (click)="onSelect(application)">
+        <tr class="items" [class.selected]="application === selectedApplication">
+            <td>{{application.id}}</td>
+            <td> {{application.title}}</td>
+            <td>{{application.description}}</td>
+            <td>{{application.type}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)='addApplication()'>Add Application</button>

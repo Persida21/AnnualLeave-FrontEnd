@@ -1,0 +1,32 @@
+<div class="card mt-4">
+    <h4 class="card-header">Admin</h4>
+    <div class="card-body">
+        <p>This page can be accessed <u>only by administrators</u>.</p>
+        <button (click) = getUsersList() > User List </button>
+        
+    </div>
+</div>
+
+
+<h1>Applications List:</h1> 
+<table class="applications">
+    <thead class ="badge">
+        <tr></tr>
+        <td>ID</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Type</td>
+        <td>User</td>
+    </thead>
+    <tbody *ngFor="let application of applications" >
+        <tr class="items">
+            <td>{{application.id}}</td>
+            <td> {{application.title}}</td>
+            <td>{{application.description}}</td>
+            <td>{{application.type}}</td>
+            <td>{{application.user}}</td>
+            <td [class.selected]="application === selectedApplication"><button (click)="accept(application)">ACCEPT</button> </td>
+            <td [class.selected]="application === selectedApplication"><button (click)="reject(application)">REJECT</button> </td>
+        </tr>
+    </tbody>
+</table>

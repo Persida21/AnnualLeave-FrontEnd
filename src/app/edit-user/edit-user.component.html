@@ -1,0 +1,37 @@
+<form #editUser="ngForm" class="form-group" (ngSubmit)="onClickSubmit(editUser.value)">
+
+    <div class="col-25">
+        <label for="name">Name</label>
+    </div>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+
+
+    <div class="col-25">
+        <label for="lastname">Lastname</label>
+    </div>
+    <input type="text" class="form-control" id="lastname" required [(ngModel)]="model.lastName" name="lastname">
+
+
+    <div class="col-25">
+        <label for="email">Email</label>
+    </div>
+    <input type="text" class="form-control" id="email" required [(ngModel)]="model.email" name="email">
+
+
+    <div class="col-25">
+        <label for="userName">UserName</label>
+    </div>
+    <input type="text" class="form-control" id="userName" required [(ngModel)]="model.userName" name="userName">
+
+
+    <div class="col-25">
+        <label for="role">Role</label>
+    </div>
+    <input type="text" class="form-control" id="role" required [(ngModel)]="role.role" name="roles">
+    <br>
+    <input type="submit" value="SAVE">
+    <br>
+    <input type="button" (click)="delete(model.userName)" value="Delete User"> 
+
+
+</form>

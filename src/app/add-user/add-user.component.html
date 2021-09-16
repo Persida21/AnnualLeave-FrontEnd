@@ -1,0 +1,38 @@
+<form #addUserForm="ngForm" class="form-group" (ngSubmit)="onClickSubmit(addUserForm.value)">
+    <div class="col-25">
+        <label for="name">Name</label>
+    </div>
+    <input type="text" class="form-control" id="name" required name="name" ngModel>
+
+    <div class="col-25">
+        <label for="lastName">Lastname</label>
+    </div>
+
+    <input type="text" class="form-control" id="lastName" required name="lastName" ngModel>
+    <div class="col-25">
+        <label for="email">Email</label>
+    </div>
+
+    <input type="text" class="form-control" id="email" required name="email" ngModel>
+
+    <div class="col-25">
+        <label for="userName">UserName</label>
+    </div>
+
+    <input type="text" class="form-control" id="userName" required name="userName" ngModel>
+
+    <div class="col-25">
+        <label for="role">Role</label>
+    </div>
+
+    <input type="text" class="form-control" id="role" required name="roles" ngModel>
+
+    <div class="col-25">
+        <label for="password">Password</label>
+    </div>
+    <input type="password" class="form-control" id="password" required name="password" ngModel>
+    <br>
+    <input type="submit" value="SAVE">
+
+
+</form>

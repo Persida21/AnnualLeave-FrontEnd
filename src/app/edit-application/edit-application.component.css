@@ -1,0 +1,13 @@
+input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+.form-group{
+    width: 500px;
+    padding-top: 60px;
+    padding-left: 30px ;
+}
+

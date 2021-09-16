@@ -1,0 +1,19 @@
+<h1>Users List:</h1> 
+<table class="users">
+    <thead class ="badge">
+        <tr></tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Role</td>
+    </thead>
+    <tbody *ngFor="let user of users"  (click)="onSelect(user)">
+        <tr class="items" [class.selected]="user === selectedUser">
+            <td>{{user.id}}</td>
+            <td> {{user.name}}</td>
+            <td>{{user.roles}}</td>
+        
+        </tr>
+    </tbody>
+</table>
+
+<button (click)='addUser()'>Add User</button>
